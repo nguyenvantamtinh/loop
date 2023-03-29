@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaem Đoán Số</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            text-align: center;
+
+        }
+        .box{
+            background: #fff;   
+            width: 300px;
+            box-shadow: 0 0 10px red;
+        }
+        button{
+            margin: 10px 0;
+        }
+        input{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Đoán Số Của Bạn</p>
+        <input type="text" id="num"><br>
+        <button onclick="do_somthing()">Check Gaem</button>
+        <p id="text">Kết Quả</p>
+    </div>
+    <script>
+        function do_somthing(){
+            let a = document.querySelector('#num').value;
+            let b = Math.round( Math.random() * 10);
+            if(a == b){
+                document.getElementById('text').innerHTML = 'CHÚC MỪNG BẠN ĐÃ ĐOÁN ĐÚNG'
+            } else{
+                alert('NHẬP LẠI')
+            }
+
+        }
+    </script>
+</body>
+</html>
